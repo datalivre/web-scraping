@@ -47,22 +47,24 @@ def get_music(new_page):
         for verse in bs.find('div', {'class': 'cnt-letra p402_premium'}).find_all('p'):
             music += ' '.join(verse.stripped_strings)
             music += ' '
-            # print(music)
+            print(music)
     except Exception as e:
         print(f'Ocorreu algum erro ao tentar acessar o site. {e}')
 
 
-get_links('skank')
+if __name__ == "__main__":
 
-stopwords = nltk.corpus.stopwords.words('portuguese')
-stopwords.append('gotta')
-list_word = []
+    get_links('skank')
 
-for m in music.split():
-    m = ''.join(p for p in m if p not in string.punctuation)
-    if len(m) >= 3:
-        if m.lower() not in stopwords:
-            list_word.append(
-                re.sub('[^çãááA-Za-z0-9+Á-Úá-ú]+', '', m.lower()))
+    stopwords = nltk.corpus.stopwords.words('portuguese')
+    stopwords.append('gotta')
+    list_word = []
 
-print(list_word[:10])
+    for m in music.split():
+        m = ''.join(p for p in m if p not in string.punctuation)
+        if len(m) >= 3:
+            if m.lower() not in stopwords:
+                list_word.append(
+                    re.sub('[^çãááA-Za-z0-9+Á-Úá-ú]+', '', m.lower()))
+
+    print(list_word[:10])
