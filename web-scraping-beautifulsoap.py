@@ -1,3 +1,8 @@
+# _*_ coding:utf-8 _*_
+# @author Robert Carlos                                 #
+# email robert.carlos@linuxmail.org                     #
+# 2019-Mar (CC BY 3.0 BR)                               # 
+
 import string
 import sys
 from urllib.request import urlopen
