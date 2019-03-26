@@ -1,4 +1,5 @@
-# Web Scraping com Beaultifulsoap
+# SCRAPY
+## Web Scraping com Beaultifulsoap
 Raspando o site letras.com.br em busca de letras musicais.
 -----
 ### O que é
