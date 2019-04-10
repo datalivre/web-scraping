@@ -17,7 +17,7 @@ music = ' '
 def get_links(band):
     '''
     Captura todos os links de uma banda, grupo ou artista a partir 
-    da página www.letras.com.br/{banda}.
+    da página https://www.letras.mus.br/{banda}.
     args
     ----
         * band: banda, grupo ou artista que terá os links capturados.
